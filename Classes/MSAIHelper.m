@@ -243,9 +243,14 @@ NSString *msai_deviceLocale(void) {
 }
 
 NSString *msai_UUID(void) {
-  NSString *resultUUID = [[NSUUID UUID] UUIDString];
+  CFUUIDRef uuidObject = CFUUIDCreate(kCFAllocatorDefault);
   
-  return resultUUID;
+  // Get the string representation of CFUUID object.
+  NSString *uuidStr = (__bridge_transfer NSString *)CFUUIDCreateString(kCFAllocatorDefault, uuidObject);
+  CFRelease(uuidObject);
+//  NSString *resultUUID = [[NSUUID UUID] UUIDString];
+  
+  return uuidStr;
 }
 
 NSString *msai_appAnonID(void) {

@@ -44,7 +44,7 @@ FOUNDATION_EXPORT NSString* const kMSAIReachabilityUserInfoType;
 /**
  *  A queue to make calls to the singleton thread safe.
  */
-@property (nonatomic, strong) dispatch_queue_t singletonQueue;
+@property (nonatomic) dispatch_queue_t singletonQueue;
 
 /**
  *  Returns a shared MSAIReachability object
@@ -67,7 +67,7 @@ FOUNDATION_EXPORT NSString* const kMSAIReachabilityUserInfoType;
 /**
  *  A queue for dispatching reachability operations.
  */
-@property (nonatomic, strong) dispatch_queue_t networkQueue;
+@property (nonatomic) dispatch_queue_t networkQueue;
 
 /**
  *  Register for network status notifications.

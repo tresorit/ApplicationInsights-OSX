@@ -18,7 +18,7 @@ FOUNDATION_EXPORT NSString *const MSAIPersistenceSuccessNotification;
 /**
  *  A queue which makes file system operations thread safe.
  */
-@property (nonatomic, strong) dispatch_queue_t persistenceQueue;
+@property (nonatomic) dispatch_queue_t persistenceQueue;
 
 /**
  *  Determines how many files (regular prio) can be on disk at a time.

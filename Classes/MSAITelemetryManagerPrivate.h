@@ -42,12 +42,12 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  A concurrent queue which creates telemetry objects and forwards them to the channel.
  */
-@property (nonatomic, strong)dispatch_queue_t telemetryEventQueue;
+@property (nonatomic)dispatch_queue_t telemetryEventQueue;
 
 /**
  *  A concurrent queue which makes writing and accessing the commonProperties thread-safe.
  */
-@property (nonatomic, strong) dispatch_queue_t commonPropertiesQueue;
+@property (nonatomic) dispatch_queue_t commonPropertiesQueue;
 
 /**
  * Converts the tracked to an envelope object and forwards it to the channel.

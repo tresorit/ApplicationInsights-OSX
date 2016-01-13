@@ -40,7 +40,7 @@ FOUNDATION_EXPORT NSInteger const defaultMaxBatchCount;
 /**
  *  A queue which makes array operations thread safe.
  */
-@property (nonatomic, strong) dispatch_queue_t dataItemsOperations;
+@property (nonatomic, assign) dispatch_queue_t dataItemsOperations;
 
 /**
  *  An integer value that keeps tracks of the number of data items added to the JSON Stream string.
@@ -117,7 +117,7 @@ void msai_resetSafeJsonStream(char *__nonnull*__nonnull jsonStream);
 /**
  *  A timer source which is used to flush the queue after a cretain time.
  */
-@property (nonatomic, strong, null_unspecified) dispatch_source_t timerSource;
+@property (nonatomic, null_unspecified) dispatch_source_t timerSource;
 
 /**
  *  Starts the timer.
